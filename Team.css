@@ -1,0 +1,120 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #6a869d;
+    color: #333;
+}
+
+/* الهيدر */
+header {
+    background-color: #ffeddd;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    gap: 10px;
+    margin-left: 0;
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* كروت الفريق */
+.team-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, max-height 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    max-height: 295px; /* الارتفاع الافتراضي */
+}
+.team-card:hover {
+    transform: scale(1.05);
+    max-height: 800px; /* تمدد الصندوق تلقائيًا عند الـ hover */
+}
+
+.team-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* تثبيت الاسم تحت الصورة */
+.team-card .name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap; /* يجعل النص متجاوب على الشاشات الصغيرة */
+}
+.team-card .role {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000; /* لون أزرق مثل LinkedIn */
+    padding: 3px 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+/* إعداد المعلومات بحيث تكون مخفية في البداية */
+.team-card .info {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* عند تحريك الماوس تظهر البيانات ويتوسع الكارد */
+.team-card:hover .info {
+    opacity: 1;
+}
+
+/* تحسين شكل الروابط */
+.team-card .info a {
+    text-decoration: none;
+    color: #0077b5;
+    font-weight: bold;
+}
+
+.team-card .info a:hover {
+    text-decoration: underline;
+}
+
+/* تحسين شكل الأيقونات */
+.team-card .info i {
+    font-size: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* الفوتر */
+footer {
+    background: #ffeddd;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+}
